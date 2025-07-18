@@ -16,7 +16,9 @@
 
 ### All public Rust crates are **thin clients** to one of those layers:
 <br>
-### `jito-sdk-rust` ↔ JSON‑RPC; `jito-rs` ↔ gRPC; `mev-protos` ↔ schema
+    - jito-sdk-rust        ↔    JSON‑RPC;
+    - jito-rs              ↔    gRPC;
+    - mev-protos           ↔    schema
 ---
 <br>
 
