@@ -82,8 +82,10 @@ sdk.send_bundle(Some(txs), None).await?;
 ```
 <br>
 
-*Up to 5 transactions, executed sequentially & atomically in one slot.*
-Jito rejects bundles >0.1 SOL total tip. ([docs.jito.wtf][1])
+####Up to 5 transactions, executed sequentially & atomically in one slot.
+####Jito rejects bundles >0.1 SOL total tip. ([docs.jito.wtf][1])
+
+
 ---
 <br>
 
