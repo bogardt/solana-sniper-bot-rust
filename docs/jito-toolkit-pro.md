@@ -15,9 +15,11 @@
 | **Gulf Stream gRPC** | Exposed via `SearcherService` (see `jito-rs`) | Firehose of mempool packets before RPC nodes see them. |
 | **JSON‑RPC façade** | `/api/v1`“Bundle RPC” (see `jito-rust-rpc`) | Thin wrapper around gRPC; easier to call from browsers or scripts. |
 
+
 All public Rust crates are **thin clients** to one of those layers:
 `jito-sdk-rust` ↔ JSON‑RPC; `jito-rs` ↔ gRPC; `mev-protos` ↔ schema
 only. :contentReference[oaicite:0]{index=0}
+
 
 ---
 
