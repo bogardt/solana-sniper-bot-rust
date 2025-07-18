@@ -67,7 +67,18 @@ while let Some(pkt) = stream.message().await? {
 ````
 
 <br>
-*Slots arrive **\~160 ms** before public RPC.*
+> 🚀 **Speed delta**  
+> 
+> ```
+>  Public RPC  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒  0 ms
+>  Gulf Stream ████████████▌  –160 ms
+> ```
+> *A typical Packet from Gulf Stream reaches us **≈ 160 ms** before it
+> shows up on public RPC nodes.*
+> 
+> [Low‑Latency Transaction Send ▸ Jito Docs](https://docs.jito.wtf/lowlatencytxnsend/)
+
+
 <br>
 See Jito docs → *Low Latency Transaction Send*. ([docs.jito.wtf][1])
 <br>
