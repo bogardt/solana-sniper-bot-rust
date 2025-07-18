@@ -14,9 +14,9 @@
 | **JSON‑RPC façade** | `/api/v1`“Bundle RPC” (see `jito-rust-rpc`) | Thin wrapper around gRPC; easier to call from browsers or scripts. |
 <br>
 
-All public Rust crates are **thin clients** to one of those layers:
+### All public Rust crates are **thin clients** to one of those layers:
 <br>
-`jito-sdk-rust` ↔ JSON‑RPC; `jito-rs` ↔ gRPC; `mev-protos` ↔ schema
+### `jito-sdk-rust` ↔ JSON‑RPC; `jito-rs` ↔ gRPC; `mev-protos` ↔ schema
 ---
 <br>
 
