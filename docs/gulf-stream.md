@@ -1,5 +1,3 @@
-<!-- generated 2025‑07‑18  -->
-
 # Understanding **Jito Gulf Stream** & Solana Priority Mechanics (2025)
 
 > This primer explains **how Gulf Stream works**, why **priority fees**  
@@ -11,7 +9,7 @@
 
 ---
 
-## Choosing your mempool provider 🚀
+## 🚀 Choosing your mempool provider
 
 The bot lets you swap the ingest layer at runtime—just edit `.env`:
 
@@ -31,7 +29,7 @@ the copy‑engine remains identical.
 
 ---
 
-## 1 ⃣ What *is* Gulf Stream?
+## 🌊 What *is* Gulf Stream?
 
 |                       | Classic Solana                | **Jito Gulf Stream**                             |
 | --------------------- | ----------------------------- | ------------------------------------------------ |
@@ -53,7 +51,7 @@ the copy‑engine remains identical.
 
 ---
 
-## 2 ⃣ Priority Mechanics on Solana (2025 refresh)
+## 🎯 Priority Mechanics on Solana (2025 refresh)
 
 | Priority lever              | Field                                                      | How to set in Rust                                                                                        |
 | --------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -70,7 +68,7 @@ leader’s CU budget.
 
 ---
 
-## 3 ⃣ Provider Landscape
+## 🌐 Provider Landscape
 
 | Provider                 | Gulf Stream?                           | Native WS Logs | Free TPS | Notes                                           |
 | ------------------------ | -------------------------------------- | -------------- | -------- | ----------------------------------------------- |
@@ -85,7 +83,7 @@ public fallback.
 
 ---
 
-## 4 ⃣ Connecting in Rust
+## 🔗 Connecting in Rust
 
 ### gRPC firehose (Jito variant)
 
@@ -126,8 +124,6 @@ while let Some(update) = stream.message().await? {
 }
 ```
 
----
-
 ### Submitting a bundle with tip
 
 ```rust
@@ -145,7 +141,7 @@ sdk.send_bundle(Some(bundle), None).await?;
 
 ---
 
-## 5 ⃣ Recommended Bot Workflow
+## 📝 Recommended Bot Workflow
 
 1. **Subscribe** to mempool (`Sniffer` for Jito, `YellowstoneMonitor` for Helius).
 2. **Filter** packets: Pump.fun `InitializeMint2`, watched wallets, Raydium pool init.
