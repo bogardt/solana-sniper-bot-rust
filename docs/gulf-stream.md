@@ -168,8 +168,3 @@ sdk.send_bundle(Some(bundle), None).await?;
 Happy sniping — and remember: **tip responsibly**! 🚀
 
 ```
-
-*Replace the entire content of `docs/gulf-stream.md` with this merged
-version.*
-::contentReference[oaicite:0]{index=0}
-```
