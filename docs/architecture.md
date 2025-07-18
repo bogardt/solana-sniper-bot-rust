@@ -2,7 +2,7 @@
 <!-- banner line keeps SEO consistent -->
 <!-- generated 2025‑07‑18 -->
 <p align="center">
-  <img src="assets/banner.svg" height="130" alt="Solana Sniper Bot">
+  <img src="../assets/banner.svg" height="130" alt="Solana Sniper Bot">
 </p>
 # 🏗 Architecture Overview
 
