@@ -80,10 +80,12 @@ let sdk = jito_sdk_rust::JitoJsonRpcSDK::new(BE_RPC, None);
 let txs = json!([ [b64_swap_tx, b64_tip_tx], { "encoding":"base64" } ]);
 sdk.send_bundle(Some(txs), None).await?;
 ```
-<br>
 
-####Up to 5 transactions, executed sequentially & atomically in one slot.
-####Jito rejects bundles >0.1 SOL total tip. ([docs.jito.wtf][1])
+<br>
+Up to 5 transactions, executed sequentially & atomically in one slot.
+<bt>
+Jito rejects bundles >0.1 SOL total tip. ([docs.jito.wtf][1])
+<bt>
 
 
 ---
