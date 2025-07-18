@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.svg" height="130" alt="Solana Sniper Bot">
+  <img src="BANNER.png" height="130" alt="Solana Sniper Bot">
 </p>
 
 <div align="center">
