@@ -1,12 +1,9 @@
 # 📚 The **Ultimate Jito Rust Toolkit** (internal edition)
-<br>
-
 > A deep reference for every publicly available Jito crate, gRPC
 > service, helper repo, and block‑engine trick we’ve found.  
 > Use this as your “one‑stop” lookup when extending or debugging the
 > commercial sniper bot.
 ---
-<br>
 
 ## 🌐 1. Overview of the Jito stack
 
