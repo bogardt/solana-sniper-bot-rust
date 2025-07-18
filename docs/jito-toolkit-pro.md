@@ -1,9 +1,3 @@
-**docs/jito-toolkit-pro.md**
-*(private, client‑only)*
-
-````markdown
-<!-- last‑update: 2025‑07‑18 -->
-
 # 📚 The **Ultimate Jito Rust Toolkit** (internal edition)
 
 > A deep reference for every publicly available Jito crate, gRPC
@@ -140,14 +134,3 @@ EPF = (compute_unit_price × compute_units) + tip_lamports
 > redistribute outside licensed clients.
 
 ```
-
-Copy this file to `docs/jito-toolkit-pro.md` in your **private** repo
-and commit.  
-All cited URLs are live as of July 2025; adjust versions if crates are
-updated.
-::contentReference[oaicite:10]{index=10}
-```
-
-[1]: https://docs.jito.wtf/lowlatencytxnsend/?utm_source=chatgpt.com "Low Latency Transaction Send — Jito Labs Documentation"
-[2]: https://docs.jito.wtf/?utm_source=chatgpt.com "What is Jito? — Jito Labs Documentation - High Performance ..."
-[3]: https://www.quicknode.com/guides/solana-development/transactions/jito-bundles-rust?utm_source=chatgpt.com "Jito Bundles: Bundle Solana Transactions with Rust - QuickNode"
