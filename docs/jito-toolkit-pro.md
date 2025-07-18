@@ -1,11 +1,12 @@
 # 📚 The **Ultimate Jito Rust Toolkit** (internal edition)
+<br>
 
 > A deep reference for every publicly available Jito crate, gRPC
 > service, helper repo, and block‑engine trick we’ve found.  
 > Use this as your “one‑stop” lookup when extending or debugging the
 > commercial sniper bot.
-
 ---
+<br>
 
 ## 🌐 1. Overview of the Jito stack
 
@@ -14,14 +15,13 @@
 | **Block Engine** | `block_engine` (closed‑source) | Validates packets, runs state & global auctions, returns bundle status. |
 | **Gulf Stream gRPC** | Exposed via `SearcherService` (see `jito-rs`) | Firehose of mempool packets before RPC nodes see them. |
 | **JSON‑RPC façade** | `/api/v1`“Bundle RPC” (see `jito-rust-rpc`) | Thin wrapper around gRPC; easier to call from browsers or scripts. |
-
+<br>
 
 All public Rust crates are **thin clients** to one of those layers:
+<br>
 `jito-sdk-rust` ↔ JSON‑RPC; `jito-rs` ↔ gRPC; `mev-protos` ↔ schema
-only. :contentReference[oaicite:0]{index=0}
-
-
 ---
+<br>
 
 ## 🛠 2. Core Rust crates
 
@@ -31,13 +31,14 @@ only. :contentReference[oaicite:0]{index=0}
 | **`jito-rs`** | Git‑master | gRPC `SearcherServiceClient`, `BlockEngineClient` (tokio/tonic). | 120–160 ms |
 | **`mev-protos`** | Git‑master | Raw `.proto` schemas → generate any language. | depends |
 | **`shredstream-proxy`** | 0.1.x | Streams raw Solana shreds over WebSocket/gRPC. | < 100 ms | :contentReference[oaicite:1]{index=1}
+<br>
 
 > **Tip** — You can compile `mev-protos` with
 > ```rust
 > tonic_build::configure().compile(&["protos/mev/searcher.proto"], &["protos"])?;
 > ```
-
 ---
+<br>
 
 ## 🧩 3. Support repos & playgrounds
 
@@ -46,8 +47,8 @@ only. :contentReference[oaicite:0]{index=0}
 | **`searcher-examples`** | Auth flow, bundle loop, CLI playground. |
 | **`block_engine_simple`** | Mock block‑engine for local integration tests. :contentReference[oaicite:2]{index=2} |
 | **`jito-js-rpc`** | TypeScript SDK; good for front‑end dashboards. :contentReference[oaicite:3]{index=3} |
-
 ---
+<br>
 
 ## ⚙️ 4. Implementation patterns
 
@@ -68,8 +69,12 @@ while let Some(pkt) = stream.message().await? {
 }
 ````
 
+<br>
 *Slots arrive **\~160 ms** before public RPC.*
+<br>
 See Jito docs → *Low Latency Transaction Send*. ([docs.jito.wtf][1])
+<br>
+
 
 ### 4.2 Build & send a bundle (JSON‑RPC)
 
@@ -78,11 +83,12 @@ let sdk = jito_sdk_rust::JitoJsonRpcSDK::new(BE_RPC, None);
 let txs = json!([ [b64_swap_tx, b64_tip_tx], { "encoding":"base64" } ]);
 sdk.send_bundle(Some(txs), None).await?;
 ```
+<br>
 
 *Up to 5 transactions, executed sequentially & atomically in one slot.*
 Jito rejects bundles >0.1 SOL total tip. ([docs.jito.wtf][1])
-
 ---
+<br>
 
 ## 💸 5. Effective Priority Fee (EPF) formula
 
