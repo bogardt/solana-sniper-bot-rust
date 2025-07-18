@@ -103,7 +103,7 @@ EPF = (compute_unit_price × compute_units) + tip_lamports
 
 ---
 
-## 🛡 6. Common errors & fixes
+## 🚧 6. Common errors & fixes
 
 | gRPC `BundleResult`       | Meaning                      | Fix                                                                          |
 | ------------------------- | ---------------------------- | ---------------------------------------------------------------------------- |
@@ -124,7 +124,7 @@ EPF = (compute_unit_price × compute_units) + tip_lamports
 
 ---
 
-## 📑 8. Further reading & bookmarks
+## 🔗 8. Further reading & bookmarks
 
 * Jito Docs → [https://docs.jito.wtf/](https://docs.jito.wtf/) ([docs.jito.wtf][2])
 * Low‑Latency guide → [https://docs.jito.wtf/lowlatencytxnsend/](https://docs.jito.wtf/lowlatencytxnsend/) ([docs.jito.wtf][1])
